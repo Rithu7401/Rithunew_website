@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">PhoneCart</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="mobilecover.html">MOBILE COVER</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+           
+        </div>
+        <div class="content">
+            <h1>Customized Mobile Covers <br>and Cases online in <br><span>PhoneCart store</span> <br></h1>
+            <p class="par">Get very exceptional, custom printed mobile covers or cases scenarios <br>anyplace in India 
+                over a few days</p>
+
+                
+                <div class="form">
+                    <h2>Login Here</h2>
+                    <form name="loginform" onsubmit= "return validation()" action="mobilecover.html" method="post">
+                    <input type="email" name="email" placeholder="Enter Email Here" >
+                    <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required placeholder="Enter Password Here" >
+                    <!--<button class="btnn"><a href="mobilecover.html">Login</a></button>-->
+                    <input type="submit" class="btnn" value="login">
+
+                    <p class="link">Don't have an account<br>
+                    <a href="register.html">Sign up </a> here</a></p>
+                    </form>
+
+                </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script>
+        function validation()
+        {
+           var id=document.loginform.email.value;
+           var ps=document.loginform.password.value;
+           if(id.length=="" && ps.length==""){
+               alert("User name and password field are empty");
+               return false;
+           }
+           else{
+               if(id.length==""){
+                   alert("email is empty");
+                   return false;
+               }
+               if(ps.length==""){
+                   alert("password field is empty");
+                   return false;
+               }
+           }
+        }
+    </script>
+
+</body>
+</html>
